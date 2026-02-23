@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <h2>Edit Contact</h2>
+
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p style="color: green;">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<form action="{{ url_for('update', id=contact[0]) }}" method="POST">
+
+    <input type="text" name="name" value="{{ contact[1] }}" required><br><br>
+
+    <input type="email" name="email" value="{{ contact[2] }}" required><br><br>
+
+    <button type="submit">Update</button>
+
+</form>
+</body>
+</html>

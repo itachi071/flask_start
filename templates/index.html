@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Navbar -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">My Flask App</a>
+    <div class="d-flex">
+      <a href="{{ url_for('login') }}" class="btn btn-outline-light btn-sm">Admin Login</a>
+    </div>
+  </div>
+</nav> -->
+
+<!-- Hero Section -->
+<div class="text-center mb-5">
+  <h1 class="display-5 fw-bold">Welcome to My Website</h1>
+  <p class="lead">This is a simple contact system built using Flask.</p>
+</div>
+
+<!-- Contact Form -->
+<div class="row justify-content-center">
+  <div class="col-md-6">
+
+    <div class="card shadow-lg">
+      <div class="card-body">
+
+        <h4 class="mb-4 text-center">Contact Us</h4>
+
+        <form method="POST">
+
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
